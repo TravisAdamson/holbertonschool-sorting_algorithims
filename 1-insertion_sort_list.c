@@ -25,8 +25,6 @@ void insertion_sort_list(listint_t **list)
 			if (after != NULL)
 				after->prev = now;
 			after = now;
-			while (printer->prev != NULL)
-				printer = printer->prev;
 			print_list(printer);
 		}
 		else
@@ -41,8 +39,6 @@ void insertion_sort_list(listint_t **list)
 					earlier->next->prev = now;
 			earlier->next = now;
 			now->prev = earlier;
-			while (printer->prev != NULL)
-				printer = printer->prev;
 			print_list(printer);
 		}
 		now = before;
