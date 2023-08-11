@@ -22,7 +22,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			now->next = after;
 			if (after != NULL)
-				after->prev = current;
+				after->prev = now;
 			after = now;
 		}
 		else
