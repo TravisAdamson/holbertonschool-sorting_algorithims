@@ -29,7 +29,7 @@ void insertion_sort_list(listint_t **list)
 				printer = after->prev;
 			else
 				printer = after;
-			print_list(printer);
+			print_list(&after);
 		}
 		else
 		{
