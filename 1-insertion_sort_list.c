@@ -13,6 +13,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *now = *list;
 	listint_t *before;
 	listint_t *earlier = NULL;
+	listint_t *printer = *list;
 
 	while (now != NULL)
 	{
@@ -24,7 +25,9 @@ void insertion_sort_list(listint_t **list)
 			if (after != NULL)
 				after->prev = now;
 			after = now;
-			print_list(*list);
+			while (printer->prev != NULL)
+				printer = printer->prev;
+			print_list(printer);
 		}
 		else
 		{
@@ -38,7 +41,9 @@ void insertion_sort_list(listint_t **list)
 					earlier->next->prev = now;
 			earlier->next = now;
 			now->prev = earlier;
-			print_list(*list);
+			while (printer->prev != NULL)
+				printer = printer->prev;
+			print_list(printer);
 		}
 		now = before;
 	}
