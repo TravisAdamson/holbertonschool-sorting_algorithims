@@ -24,17 +24,21 @@ void insertion_sort_list(listint_t **list)
 			if (after != NULL)
 				after->prev = now;
 			after = now;
+			print_list(*list);
 		}
 		else
 		{
 			earlier = after;
 			while (earlier->next != NULL && earlier->next->n <= now->n)
+			{
 				earlier = earlier->next;
+			}
 			now->next = earlier->next;
 			if (earlier->next != NULL)
 					earlier->next->prev = now;
 			earlier->next = now;
 			now->prev = earlier;
+			print_list(*list);
 		}
 		now = before;
 	}
