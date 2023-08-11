@@ -10,7 +10,7 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *after = NULL;
-	listint_t *now = head;
+	listint_t *now = *list;
 	listint_t *before;
 	listint_t *earlier = NULL;
 
@@ -38,5 +38,5 @@ void insertion_sort_list(listint_t **list)
 		}
 		now = before;
 	}
-	head = after;
+	*list = after;
 }
