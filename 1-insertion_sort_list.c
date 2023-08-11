@@ -43,7 +43,7 @@ void insertion_sort_list(listint_t **list)
 		now = before;
 		if((is_printed = 0) && (now != after) && (now->next != NULL))
 		{
-			print_list(list);
+			print_list(*list);
 			is_printed = 1;
 		}
 	}
