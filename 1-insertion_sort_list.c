@@ -38,9 +38,10 @@ void insertion_sort_list(listint_t **list)
 					earlier->next->prev = now;
 			earlier->next = now;
 			now->prev = earlier;
-			print_list(after);
+			printf("%d, ", now->n);;
 		}
 		now = before;
+		printf("\n");
 	}
 	*list = after;
 }
