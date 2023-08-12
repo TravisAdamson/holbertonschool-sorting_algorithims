@@ -67,7 +67,7 @@ int make_partition(int *array, int low, int high, size_t size)
 			print_array(array, size);
 		}
 	}
-	swap(&array[index + 1], &array[high]);
+	swap_elem(&array[index + 1], &array[high]);
 	print_array(array, size);
 	return (index + 1);
 }
@@ -82,10 +82,11 @@ int make_partition(int *array, int low, int high, size_t size)
  */
 int high_low(int *array, size_t size, int h_l)
 {
-	int value = array[0], index = 1;
+	int value = array[0], index = 1, temp_size = 0;
 	int array_index = 0;
 
-	for (index = 1; index < size; index++)
+	temp_size = (int)size;
+	for (index = 1; index < temp_size; index++)
 	{
 		if (h_l == 0)
 		{
