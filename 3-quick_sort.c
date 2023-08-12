@@ -122,7 +122,7 @@ int high_low(int *array, size_t size, int h_l)
  *
  * Return: No return value
  */
-void swap_elem(int* arr_a, int* arr_b)
+void swap_elem(int *arr_a, int *arr_b)
 {
 	int temp;
 
