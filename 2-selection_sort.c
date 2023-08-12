@@ -28,6 +28,6 @@ void selection_sort(int *array, size_t size)
 		array[index] = temp;
 		if (index != i)
 			print_array(array, size);
-		index = i;
+		i = index;
 	}
 }
