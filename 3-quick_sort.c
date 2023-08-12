@@ -13,7 +13,7 @@ void quick_sort(int *array, size_t size)
 
 	if (size < 2)
 		return;
-	high = ((int)size) - 1;
+	high = (int)size - 1;
 	low = 0;
 	if (low < high)
 	{
@@ -60,11 +60,14 @@ int make_partition(int *array, int low, int high, size_t size)
 	index = (low - 1);
 	for (index2 = low; index2 <= high - 1; index2++)
 	{
-		if (array[index2] < pivot)
+		if (array[index2] <= pivot)
 		{
 			index++;
-			swap_elem(&array[index], &array[index2]);
-			print_array(array, size);
+			if (index != index2)
+			{
+				swap_elem(&array[index], &array[index2]);
+				print_array(array, size);
+			}
 		}
 	}
 	swap_elem(&array[index + 1], &array[high]);
