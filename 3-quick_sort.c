@@ -70,8 +70,11 @@ int make_partition(int *array, int low, int high, size_t size)
 			}
 		}
 	}
-	swap_elem(&array[index + 1], &array[high]);
-	print_array(array, size);
+	if (index + 1 != high)
+	{
+		swap_elem(&array[index + 1], &array[high]);
+		print_array(array, size);
+	}
 	return (index + 1);
 }
 
