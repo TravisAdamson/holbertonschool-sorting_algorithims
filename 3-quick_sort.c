@@ -15,6 +15,7 @@ void quick_sort(int *array, size_t size)
 		return;
 	high = high_low(array, size, 1);
 	low = high_low(array, size, 0);
+	printf("high = %d, low = %d\n", high, low);
 	if (low < high)
 	{
 		piv = make_partition(array, low, high, size);
@@ -85,9 +86,7 @@ int high_low(int *array, size_t size, int h_l)
 	int value = array[0], index = 1, temp_size = 0;
 	int array_index = 0;
 
-	printf("size = %lu\n", size);
 	temp_size = (int)size;
-	printf("temp_size = %d\n", temp_size);
 	for (index = 1; index <= temp_size; index++)
 	{
 		if (h_l == 0)
