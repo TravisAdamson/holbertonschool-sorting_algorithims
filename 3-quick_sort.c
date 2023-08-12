@@ -9,7 +9,7 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	size_t piv, high, low;
+	int piv, high, low;
 
 	if (size < 2)
 		return;
@@ -32,9 +32,9 @@ void quick_sort(int *array, size_t size)
  *
  * Return: No Return value
  */
-void quick_sort2(int *array, size_t low, size_t high, size_t size)
+void quick_sort2(int *array, int low, int high, size_t size)
 {
-	size_t piv;
+	int piv;
 
 	if (low < high)
 	{
@@ -52,9 +52,9 @@ void quick_sort2(int *array, size_t low, size_t high, size_t size)
  *
  * Return: No return
  */
-size_t make_partition(int *array, size_t low, size_t high, size_t size)
+int make_partition(int *array, int low, int high, size_t size)
 {
-	size_t index, pivot, index2;
+	int index, pivot, index2;
 
 	pivot = array[high];
 	index = (low - 1);
@@ -80,7 +80,7 @@ size_t make_partition(int *array, size_t low, size_t high, size_t size)
  *
  * Return: The high or low value
  */
-size_t high_low(int *array, size_t size, int h_l)
+int high_low(int *array, size_t size, int h_l)
 {
 	int value = array[0], index = 1;
 	int array_index = 0;

@@ -24,9 +24,9 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
-void quick_sort2(int *array, size_t low, size_t high, size_t size);
-size_t high_low(int *array, size_t size, int h_l);
+void quick_sort2(int *array, int low, int high, int size);
+int high_low(int *array, size_t size, int h_l);
 void swap_elem(int *arr_a, int *arr_b);
-size_t make_partition(int *array, size_t low, size_t high, size_t size);
+int make_partition(int *array, int low, int high, size_t size);
 
 #endif
