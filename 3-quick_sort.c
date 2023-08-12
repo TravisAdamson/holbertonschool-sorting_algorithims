@@ -63,11 +63,11 @@ int make_partition(int *array, int low, int high, size_t size)
 		if (array[index2] < pivot)
 		{
 			index++;
-			swap_elem(array[index], array[index]);
+			swap_elem(&array[index], &array[index]);
 			print_array(array, size);
 		}
 	}
-	swap(array[index + 1], array[high]);
+	swap(&array[index + 1], &array[high]);
 	print_array(array, size);
 	return (index + 1);
 }
@@ -115,7 +115,7 @@ int high_low(int *array, size_t size, int h_l)
  *
  * Return: No return value
  */
-void swap_elem(int *arr_a, int *arr_b)
+void swap_elem(int* arr_a, int* arr_b)
 {
 	int temp;
 
