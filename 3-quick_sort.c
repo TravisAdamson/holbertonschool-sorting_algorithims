@@ -85,7 +85,7 @@ int high_low(int *array, size_t size, int h_l)
 	int value = array[0], index = 1, temp_size = 0;
 	int array_index = 0;
 
-	printf("size = %u\n", size);
+	printf("size = %lu\n", size);
 	temp_size = (int)size;
 	printf("temp_size = %d\n", temp_size);
 	for (index = 1; index <= temp_size; index++)
